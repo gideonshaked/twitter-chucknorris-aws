@@ -9,6 +9,6 @@ This is a Twitter bot that posts Chuck Norris jokes on a schedule. It is made to
 
 ## Usage
 
-Add this to your cron file: `30 12 * * * pipenv run python /path/to/repo/main.py # This runs the bot at 12:30 pm every day`
+Add this your crontab with sudo: `30 12 * * * cd /<path>/<to>/<repo> && /home/<user>/.local/bin/pipenv run python main.py # This runs the bot at 12:30 pm every day`
 
 ## Profit??
