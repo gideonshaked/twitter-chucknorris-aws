@@ -62,7 +62,7 @@ def main():
     else:
         joke = getJoke2()
 
-    print(joke)
+    postJoke(joke)
 
 if __name__ == '__main__':
     main()
