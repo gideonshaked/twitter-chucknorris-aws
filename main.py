@@ -7,6 +7,7 @@ from datetime import datetime
 import random
 import config
 
+
 # Get joke from icndb API
 def getJoke1():
     response = requests.get("http://api.icndb.com/jokes/random?escape=javascript")
