@@ -3,12 +3,13 @@ This is a Twitter bot that posts Chuck Norris jokes on a schedule. It is made to
 
 ## Installation
 
-1. `cp example_config.py config.py # Create config file`
-2. Add your Twitter API credentials to config.py
-3. `pipenv install # Install dependencies`
+1. `pip install -r requirements.txt # Install dependencies`
+2. `cp example_config.py config.py # Create config file`
+3. Add your Twitter API credentials to config.py
 
 ## Usage
 
-Add this your crontab with sudo: `30 12 * * * cd /<path>/<to>/<repo> && /home/<user>/.local/bin/pipenv run python main.py # This runs the bot at 12:30 pm every day`
+- To run once: `python3 main.py`
+- To run daily add this to your crontab: `30 12 * * * python3 /<path>/<to>/<repo>/main.py # Run bot daily at 12:30 pm`
 
 ## Profit??
