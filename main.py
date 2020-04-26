@@ -45,6 +45,7 @@ def postJoke(joke):
     except:
         logError("Could not verify credentials. Error during authentication.")
 
+    # Post joke
     api.update_status(joke)
 
 # Log errors to error.log and end execution
