@@ -1,4 +1,4 @@
 api_key = "abcde"
 api_secret = "fghij"
-access_token = "lmnop"
-acess_token_secret = "qrstu"
+access_token = "klmno"
+acess_token_secret = "pqrst"
