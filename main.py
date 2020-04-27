@@ -58,7 +58,7 @@ def logError(error):
 
 # main
 def main():
-    if (random.randint(0,1) % 2 == 0):
+    if (random.randint(0,1) == 0):
         joke = getJoke1()
     else:
         joke = getJoke2()
