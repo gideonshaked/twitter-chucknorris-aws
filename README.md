@@ -8,7 +8,7 @@ This is a Twitter bot that posts Chuck Norris jokes on a schedule. It is made to
 ## Config
 
 1. `cp example_config.ini config.ini # Create config file`
-2. Add your Twitter API credentials to config.py
+2. Add your Twitter API credentials to config.ini
 
 ## Usage
 
