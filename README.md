@@ -1,4 +1,4 @@
-# Chuck Norris Bot
+# Chuck Norris Bot [![Build Status](https://travis-ci.com/The-Kid-Gid/Chuck-Norris-Bot.svg?branch=master)](https://travis-ci.com/The-Kid-Gid/Chuck-Norris-Bot)
 This is a Twitter bot that posts Chuck Norris jokes on a schedule. It is made to be scheduled to be run by cron, and it uses Twitter's API. To install it yourself, follow the instructions below.
 
 ## Installation
