@@ -5,7 +5,7 @@ import json
 import sys
 from datetime import datetime
 import random
-import config
+import configparser
 
 # Get joke from icndb API
 def getJoke1():
@@ -35,9 +35,17 @@ def getJoke2():
 
 # Post joke to Twitter
 def postJoke(joke):
+    # Read config.ini
+    config = configparser.ConfigParser()
+    config.read("config.ini")
+    api_key = config["API Credentials"]["api key"]
+    api_secret = config["API Credentials"]["api secret"]
+    access_token = config["API Credentials"]["access token"]
+    access_token_secret = config["API Credentials"]["access token secret"]
+
     # Authenticate to Twitter
-    auth = tweepy.OAuthHandler(config.api_key, config.api_secret)
-    auth.set_access_token(config.access_token, config.acess_token_secret)
+    auth = tweepy.OAuthHandler(api_key, api_secret)
+    auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth)
 
     try:
