@@ -14,4 +14,4 @@ This is a Twitter bot that posts Chuck Norris jokes on a schedule. It is intende
 ## Usage
 
 - To run once: `python3 main.py`
-- To run daily add this to your crontab: `30 12 * * * python3 /<path>/<to>/<repo>/main.py # Run bot daily at 12:30 pm`
+- To run daily add this to your crontab: `30 12 * * * cd /<path>/<to>/<repo> && python3 main.py # Run bot daily at 12:30 pm`
