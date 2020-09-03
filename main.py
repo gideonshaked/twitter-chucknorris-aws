@@ -2,9 +2,7 @@ import tweepy
 import requests
 import json
 import sys
-from datetime import (
-    datetime,
-)
+from datetime import datetime
 import random
 import configparser
 
@@ -37,9 +35,7 @@ def getJoke2():
 
 
 # Post joke to Twitter
-def postJoke(
-    joke,
-):
+def postJoke(joke):
     # Read config.ini
     config = configparser.ConfigParser()
     config.read("config.ini")
@@ -49,14 +45,8 @@ def postJoke(
     access_token_secret = config["API Credentials"]["access token secret"]
 
     # Authenticate to Twitter
-    auth = tweepy.OAuthHandler(
-        api_key,
-        api_secret,
-    )
-    auth.set_access_token(
-        access_token,
-        access_token_secret,
-    )
+    auth = tweepy.OAuthHandler(api_key, api_secret)
+    auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth)
 
     try:
@@ -69,14 +59,9 @@ def postJoke(
 
 
 # Log errors to error.log and end execution
-def logError(
-    error,
-):
+def logError(error):
     time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    log = open(
-        "errors.log",
-        "w",
-    )
+    log = open("errors.log", "w")
     log.write(time + ": " + error)
     log.close()
     sys.exit()
@@ -84,13 +69,7 @@ def logError(
 
 # main
 def main():
-    if (
-        random.randint(
-            0,
-            1,
-        )
-        == 0
-    ):
+    if random.randint(0, 1) == 0:
         joke = getJoke1()
     else:
         joke = getJoke2()
