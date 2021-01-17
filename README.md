@@ -1,6 +1,6 @@
 # `twitter-chucknorris-aws` [![Lint](https://github.com/The-Kid-Gid/twitter-chucknorris-aws/workflows/Lint/badge.svg)](https://github.com/The-Kid-Gid/twitter-chucknorris-aws/actions?query=workflow%3ALint)
 
-This is a Twitter bot hosted on AWS Lambda that posts Chuck Norris jokes on a schedule. You can check it out at [twitter.com/chucknorrisbot1](twitter.com/chucknorrisbot1).
+This is a Twitter bot hosted on AWS Lambda that posts Chuck Norris jokes on a schedule. You can check it out at [https://twitter.com/chucknorrisbot1](https://twitter.com/chucknorrisbot1).
 
 ## Architecture
 
