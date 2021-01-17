@@ -1,0 +1,14 @@
+[tool.black]
+line-length = 120
+exclude = "./.git"
+
+[tool.flakehell]
+max_line_length = 120
+exclude = [".git", "__pycache__"]
+
+[tool.flakehell.plugins]
+pyflakes = ["+*"]
+pycodestyle = ["+*"]
+
+[tool.isort]
+profile = "black"

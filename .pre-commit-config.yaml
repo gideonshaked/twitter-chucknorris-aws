@@ -1,0 +1,36 @@
+---
+repos:
+  - repo: https://github.com/psf/black
+    rev: master
+    hooks:
+      - id: black
+        language_version: python3.8
+  - repo: https://github.com/timothycrosley/isort
+    rev: master
+    hooks:
+      - id: isort
+  - repo: https://github.com/life4/flakehell
+    rev: master
+    hooks:
+      - id: flakehell
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: master
+    hooks:
+      - id: requirements-txt-fixer
+      - id: check-toml
+      - id: check-yaml
+  - repo: https://github.com/codespell-project/codespell
+    rev: master
+    hooks:
+      - id: codespell
+        # Should be with the "--skip" option but this seems to be broken
+        exclude: >
+          (?x)^(
+              .*\.svg|
+              .*\.cast
+          )$
+  - repo: https://github.com/pappasam/toml-sort
+    rev: master
+    hooks:
+      - id: toml-sort
+        args: [--in-place]
