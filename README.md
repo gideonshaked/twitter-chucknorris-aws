@@ -1,17 +1,7 @@
-# Chuck Norris Bot [![Build Status](https://travis-ci.com/The-Kid-Gid/Chuck-Norris-Bot.svg?branch=master)](https://travis-ci.com/The-Kid-Gid/Chuck-Norris-Bot)
+# `twitter-chucknorris-aws` [![Lint](https://github.com/The-Kid-Gid/twitter-chucknorris-aws/workflows/Lint/badge.svg)](https://github.com/The-Kid-Gid/twitter-chucknorris-aws/actions?query=workflow%3ALint)
 
-This is a Twitter bot that posts Chuck Norris jokes on a schedule. It is intended to be run on a schedule by cron, and it uses Twitter's API. To install it yourself, follow the instructions below.
+This is a Twitter bot hosted on AWS Lambda that posts Chuck Norris jokes on a schedule. You can check it out at [twitter.com/chucknorrisbot1](twitter.com/chucknorrisbot1).
 
-## Installation
+## Architecture
 
-`sudo python3 -m pip install -r requirements.txt # Install dependencies`
-
-## Config
-
-1. `cp example_config.ini config.ini # Create config file`
-2. Add your Twitter API credentials to config.ini.
-
-## Usage
-
-- To run once: `python3 main.py`
-- To run daily add this to your crontab: `30 12 * * * cd /<path>/<to>/<repo> && python3 main.py # Run bot daily at 12:30 pm`
+Chuck Norris Bot runs as an AWS Lambda function that solely consists of [`twitter_chucknorris.py`](https://github.com/The-Kid-Gid/twitter-chucknorris-aws/blob/master/src/twitter_chucknorris.py). It is triggered by an Amazon Eventbridge Rule that runs on a cron schedule of every three hours from 9:00 am to 6:00 pm every day. It also utilizes a Lambda layer to pull in its dependencies—[Tweepy](https://github.com/tweepy/tweepy) and [Requests](https://github.com/psf/requests).
