@@ -58,6 +58,7 @@ def setup_twitter_api() -> tweepy.API:
     auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth)
     api.verify_credentials()
+    
     return api
 
 
